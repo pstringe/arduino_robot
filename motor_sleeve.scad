@@ -125,6 +125,13 @@ difference(){
                 rotate([90,0,0])
                     cylinder(h=exterior_width + SQUARE_WIDTH, r1=30, r2=30);
         }
+
+        //side slits
+        scale(DETAIL_SCALE){
+            translate([-SQUARE_WIDTH,SQUARE_WIDTH * 2, exterior_height/2])
+                rotate([0,0,0])
+                    cube([SQUARE_WIDTH * 6, SQUARE_WIDTH, SQUARE_WIDTH * 3]);
+        }
         
    }
 
