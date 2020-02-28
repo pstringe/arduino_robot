@@ -108,9 +108,9 @@ difference(){
         }
     }
     
-    /*
+    
     union(){
-    */
+   
         //side holes (negative space)
         scale(DETAIL_SCALE){
             translate([SQUARE_WIDTH/-2, exterior_height, PLATE_HEIGHT + (exterior_height / 2)])
@@ -118,13 +118,14 @@ difference(){
                     cylinder(h=exterior_width + SQUARE_WIDTH, r1=70, r2=70);
         }
       
-      /*  
+       
         //side holes (negative space)
         scale(DETAIL_SCALE){
-            translate([SQUARE_WIDTH/-2, exterior_height, PLATE_HEIGHT + (interior_height / 2)])
+            translate([exterior_width / 2, SQUARE_WIDTH * 2, PLATE_HEIGHT + (exterior_height / 2)])
                 rotate([90,0,0])
-                    cylinder(h=exterior_width + SQUARE_WIDTH, r1=70, r2=70);
+                    cylinder(h=exterior_width + SQUARE_WIDTH, r1=30, r2=30);
         }
-    }
-*/
+        
+   }
+
 }
