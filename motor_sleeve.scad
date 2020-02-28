@@ -119,7 +119,7 @@ difference(){
         }
       
        
-        //side holes (negative space)
+        //front holes (negative space)
         scale(DETAIL_SCALE){
             translate([exterior_width / 2, SQUARE_WIDTH * 2, PLATE_HEIGHT + (exterior_height / 2)])
                 rotate([90,0,0])
@@ -131,6 +131,13 @@ difference(){
             translate([-SQUARE_WIDTH,SQUARE_WIDTH * 2, exterior_height/2])
                 rotate([0,0,0])
                     cube([SQUARE_WIDTH * 6, SQUARE_WIDTH, SQUARE_WIDTH * 3]);
+        }
+
+        //front slits
+        scale(DETAIL_SCALE){
+            translate([exterior_width / 2, 0, PLATE_HEIGHT + exterior_height])
+                rotate([90,0,0])
+                    cube([SQUARE_WIDTH * 0.5, SQUARE_WIDTH * 2, SQUARE_WIDTH * 2], center=true);
         }
         
    }
